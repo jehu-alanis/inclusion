@@ -1,0 +1,77 @@
+<% include partials/_headeritsx %>
+
+
+<div class="container mt-7">
+        <div class="col-md-16">
+    
+                <form action="/addformulario1"  name=formulario method="POST">
+          <p style="text-align: center;"><h5>NUEVO ALUMNO</h5></p>
+                <div class="row">
+                  
+                        <table class="table table-bordered table-hover">
+                        
+                                <tbody>
+                      
+                                <tr class="table-primary">
+                                    <th scope="col " >ALUMNO</th>
+                                    
+                              </tr>
+                                    
+                                          <tr> <td>MATRICULA: <div class="form-group"><input type="text" name="matricula"  class="form-control" required></div></td>
+                                                <td>NOMBRE: <div class="form-group"><input type="text" name="nombre" class="form-control"required></div></td>
+                                                <td>APELLIDO PATERNO: <div class="form-group"><input type="text" name="ap_paterno" class="form-control"required></div></td>
+                                                <td>APELLIDO MATERNO: <div class="form-group"><input type="text" name="ap_materno" class="form-control"required></div></td>
+                                                 
+                                                  
+        
+                                          </tr>
+                                          <tr>
+                                                <td>NSS: <div class="form-group"><input type="text" name="nss" class="form-control"required></div></td>
+                                                <fieldset class="form-group"  >
+                                              <td>  <legend>SEXO</legend>
+                                                <div class="form-check">
+                                                <label class="form-check-label">
+                                                 <input type="radio" class="form-check-input" name="Sexo" id="optionsRadios1" value="MASCULINO" checked="">
+                                                 MASCULINO
+                                                  </label>
+                                                 </div>
+                                                 <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input type="radio" class="form-check-input" name="Sexo" id="optionsRadios2" value="FEMENINO">
+                                                  FEMENINO
+                                                 </label>
+                                                 </div> </fieldset></td>
+
+                                          <td>FECHA DE NACIMIENTO: <div class="form-group"><input type="date" name="Fecha_nacimiento" class="form-control"required></div></td>
+                                          <td>CURP: <div class="form-group"><input type="text" name="curp"  class="form-control" required></div></td>
+                                          </tr>
+                                          <td>TIPO DE SANGRE: <div class="form-group"><input type="text" name="T_sangre"  class="form-control" required></div></td>
+
+                                          <td>NACIONALIDAD: <div class="form-group"><input type="text" name="Nacionalidad" class="form-control"required></div></td>
+                                          <td>DIRECCION: <div class="form-group"><input type="text" name="direcccion" class="form-control"required></div></td>
+                                          <td>CIUDAD: <div class="form-group"><input type="text" name="ciudad" class="form-control"required></div></td>
+                                          
+                            
+                                    
+                                    
+                                          
+                                          <tr>
+                                         <td>MUNICIPIO: <div class="form-group"><input type="text" name="municipio"  class="form-control" required></div></td>
+
+
+                                                <td>TELEFONO RESIDENCIAL:<div class="form-group"><input type="text" name="Tel_residencial"  class="form-control" ></div></td>
+                                                <td>TELEFONO CELULAR:<div class="form-group"><input type="text" name="celular"  class="form-control" required></div></td>
+                                                <td>EMAIL: <div class="form-group"><input type="email" name="correo"  class="form-control" ></div></td>
+                                          </tr>
+                            
+                    
+                                        </tbody>
+                                        </table>
+            
+                                        <button type="submit" class="btn btn-primary">GUARDAR</button>
+                                        
+        </form>
+            </div>
+        </div>
+
+<% include partials/_foteritsx %>

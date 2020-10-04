@@ -1,0 +1,288 @@
+<script type="text/javascript">
+        function valores(f, cual) {
+         todos = new Array();
+         for (var i = 0, total = f[cual].length; i < total; i++)
+           if (f[cual][i].checked) todos[todos.length] = f[cual][i].value;
+          return todos.join(".");
+        }
+        </script>
+    
+    
+    <script type="text/javascript" src="https://www.jose-aguilar.com/scripts/jquery/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#enviar').click(function(){
+            var selected = '';    
+            $('#formid input[type=checkbox]').each(function(){
+                if (this.checked) {
+                    selected += $(this).val()+', ';
+                }
+            }); 
+    
+            if (selected != '') 
+            document.getElementById("pedro").value=selected;
+            ///var hidden = document.getElementById('pedro')+selected;
+      
+          
+            hidden.value = span.innerHTML; 
+        });         
+    });    
+    </script>
+    
+
+
+
+
+
+
+
+<% include partials/_headerxico %>
+
+
+<div class="container mt-7">
+ <div class="col-md-16">
+<form action="/addformulario44"  name=formulario method="POST">
+          
+        <div class="row">
+                  
+                        <table class="table table-bordered table-hover">
+                        
+                                <tbody>
+                      
+                                <tr class="table-primary">
+                                    <th scope="col " >TIPO DISCAPACIDAD</th>
+                                    
+                                </tr>
+                                    
+                                          
+     <tr>                                     
+    
+
+            <fieldset class="form-group">
+                   
+                    <input  type="text" name="tipo"  id="pedro"  style="display:none;" value=" " >
+                  <td>  <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="1"  value="INTELECTUAL" >
+                        INTELECTUAL
+                      </label>
+                    </div>
+                </td>
+                    <td>
+                    <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" id="2"  value="MATRIZ" >
+                              MATRIZ
+                            </label>
+                          </div></td>
+                    <td>  <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" id="3"  value="SORDERA" >
+                                  SORDERA
+                                </label>
+                              </div></td>
+                            <td>   <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input class="form-check-input" type="checkbox" id="4"  value="HIPOACUSIA" >
+                                      HIPOACUSIA
+                                    </label>
+                                  </div>
+                                </td>
+                            <td> <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox" id="5"  value="CEGUERA" >
+                                          CEGUERA
+                                        </label>
+                                      </div>
+                                    </td>
+                                <td> <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input class="form-check-input" type="checkbox" id="6"  value="BAJA_VISIÓN" >
+                                              BAJA VISIÓN
+                                            </label>
+                                          </div></td>
+                                        <td>  <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input class="form-check-input" type="checkbox" id="7"  value="MÚLTIPLE" >
+                                                  MÚLTIPLE
+                                                </label>
+                                              </div></td>
+
+                            <td> <div class="form-check">
+                             <label class="form-check-label">
+                             <input class="form-check-input" type="checkbox" id="8"  value="SORDO_CEGUERA" >
+                             SORDO CEGUERA
+                             </label>
+                            </div></td>
+                        <td> <div class="form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="9"  value="PSICOSOCIAL_MENTAL" >
+                            PSICOSOCIAL/ MENTAL
+                            </label>
+                            </div></td>
+                         
+                        
+                    </tr>
+
+                        <tr>                                     
+                        
+                            <td><div class="form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="10"  value="ESPECTRO_AUTISTA" >
+                            ESPECTRO AUTISTA
+                             </label>
+                             </div></td>
+                            <td><div class="form-check">
+                            <label class="form-check-label">
+                             <input class="form-check-input" type="checkbox" id="11"  value="DS_CONDUCTA" >
+                             DS CONDUCTA
+                             </label>
+                             </div></td>
+                            <td>   <div class="form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="12"  value="DS_COMUNICACIÓN" >
+                            DS COMUNICACIÓN
+                            </label>
+                            </div></td>        
+                        <td> <div class="form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="13"  value="DS_APRENDIZAJE" >
+                            DS APRENDIZAJE
+                            </label>
+                            </div></td>
+                        <td>    <div class="form-check">
+                             <label class="form-check-label">
+                             <input class="form-check-input" type="checkbox" id="14"  value="TDA_TDA_H" >
+                             TDA TDA-H
+                             </label>
+                             </div></td>
+                        <td> <div class="form-check">
+                             <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="15"  value="AS_INTELECTUAL" >
+                            AS INTELECTUAL
+                             </label>
+                             </div></td>
+
+                    <td> <div class="form-check">
+                             <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="16"  value="AS_CREATIVA" >
+                            AS CREATIVA
+                            </label>
+                            </div></td>
+
+                <td>         <div class="form-check">
+                              <label class="form-check-label">
+                             <input class="form-check-input" type="checkbox" id="17"  value="AS_ARTÍSTICA" >
+                             AS ARTÍSTICA
+                            </label>
+                            </div></td>
+                <td><div class="form-check">
+                             <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="18"  value="AS_PSICOMOTRIZ" >
+                            AS PSICOMOTRIZ
+                            </label>
+                            </div></td>
+                            <tr>
+                        <td> <div class="form-check">
+                                    <label class="form-check-label">
+                                   <input class="form-check-input" type="checkbox" id="19"  value="AS_SOCIOAFECTICA" >
+                                   AS SOCIOAFECTICA
+                                   </label>
+                                   </div></td>
+
+                                   <td><b>AS ACITUDES SOBRESALIENTE</b></td> 
+                                    <td>  <b>DS DIFICULTADES SEVERAS</b></td>
+                                </tr>
+                  </fieldset>    
+                  
+</tr>
+    
+</tbody>
+</table>
+<table class="table table-bordered table-hover">
+                        
+        <tbody>
+                <tr>
+
+ <td>OTRO (ESPECIFIQUE): <div ><input type="text" name="tipootro" class="form-control" ></div></td>
+    
+
+<td>MATRICULA: <div ><input type="text" name="id_matricula" value="<%= data.id_hijo_matricula%>" class="form-control"required></div></td>
+    
+<td><div><label for="exampleTextarea">OBSERVACIONES</label> <textarea class="form-control" id="exampleTextarea" name="observaciones" rows="3"></textarea>
+</div></td>
+</tr> 
+</tbody>
+</table>
+
+ <button type="submit" class="btn btn-primary">GUARDAR</button>
+                                        
+        </form>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container mt-2">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#Modalpdf">
+                
+                <i class='fas fa-question-circle' style='font-size:14px'></i> </button>
+           
+                        <div class="col-md-16">
+                
+
+        <form action="/images/upload2"   method="POST" enctype="multipart/form-data">
+                <div class="row">         
+                <input type="text" name="nombre">
+                <input type="file" name="image">
+                <button type="submit">
+                        Subir
+
+
+                </button>
+        </form>
+
+</div>
+</div>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+     <!-- The Modal -->
+     <div class="modal fade" id="Modalpdf">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">SUBIR PDF<br></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+Aquí podrás  subir el archivo PDF del alumno, si no cuenta con él lo podrá subir más adelante en el apartado "Actualizar" 
+  
+  </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+
+
+<% include partials/_foterxico %>

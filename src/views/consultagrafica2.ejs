@@ -1,0 +1,110 @@
+<% include partials/_headeritsx %>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src= https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+      var datos = {
+          type: "pie",
+          data : {
+              datasets :[{
+                  data : [
+                      0,
+                      0,
+                      
+                  ],
+                  backgroundColor: [
+                      "#F7464A",
+                      "#46BFBD",
+                      
+                  ],
+              }],
+              labels : [
+                  "XALAPA",
+                  "XICO",
+                  "RINCONADA",
+                  
+              ]
+          },
+          options : {
+              responsive : true,
+          }
+      };
+
+      var canvas = document.getElementById('chart').getContext('2d');
+      window.pie = new Chart(canvas, datos);
+
+      setInterval(function(){
+          datos.data.datasets.splice(0);
+          var newData = {
+              backgroundColor : [
+                  "#F7464A",
+                  "#46BFBD",
+                  "#008000",
+                  
+              ],
+            
+              data : [ XALAPA(),  XICO(),RINCONADA(), ]
+          };
+
+          datos.data.datasets.push(newData);
+
+          window.pie.update();
+
+      }, 5000);
+
+
+
+      function XALAPA(){
+        return  a = parseFloat(document.formulario.XALAPA.value);
+
+      }
+      function XICO(){
+        return  B = parseFloat(document.formulario.XICO.value);
+
+      }
+
+      function RINCONADA(){
+        return  B = parseFloat(document.formulario.RINCONADA.value);
+
+      }
+
+  });
+  </script>
+
+  <div id="canvas-container" style="width:50%;">
+      <canvas id="chart" width="500" height="350"></canvas>
+  </div>
+
+
+  <div class="container mt-7">
+    <div class="col-md-16">
+
+            <form action=""  name=formulario method="POST">
+      
+            <div class="row">
+              
+                    <table class="table table-bordered table-hover">
+                    
+                            <tbody>
+
+                                
+                                      
+                                         
+<td>XALAPA: <div class="form-group"><input type="text" name="XALAPA" value="<%= data.a1%>" class="form-control"required></div></td>
+<td>XICO: <div class="form-group"><input type="text" name="XICO" value="<%= data.a2%>" class="form-control"required></div></td>
+<td>RINCONADA: <div class="form-group"><input type="text" name="RINCONADA" value="<%= data.a3%>" class="form-control"required></div></td>
+                                            
+ </div> 
+</tbody>
+</table>                                    
+    </form>
+        </div>
+    </div>
+
+
+
+
+  <% include partials/_foteritsx %>

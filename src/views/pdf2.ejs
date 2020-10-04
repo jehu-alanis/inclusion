@@ -1,0 +1,184 @@
+<% include partials/_headerxico %>
+
+
+<div class="container mt-7">
+        <div class="col-md-16">
+    
+                <form action="/pdf"  name=formulario method="POST">
+          <p style="text-align: center;"><h5>ALUMNO</h5></p>
+                <div class="row">
+                  
+                        <table class="table table-bordered table-hover">
+                        
+                                <tbody>
+                      
+                                <tr class="table-primary">
+                                    <th scope="col " >ALUMNO</th>
+                                    
+                              </tr>
+                                    
+                                          <tr> <td>MATRICULA: <div class="form-group"><input type="text" name="matricula" value="<%= data.matricula%>" class="form-control" required></div></td>
+                                                <td>NOMBRE: <div class="form-group"><input type="text" name="nombre" value="<%= data.nombre%>"class="form-control"required></div></td>
+                                                <td>APELLIDO PATERNO: <div class="form-group"><input type="text"  name="ap_paterno" value="<%= data.ap_paterno%>" class="form-control"required></div></td>
+                                                <td>APELLIDO MATERNO: <div class="form-group"><input type="text" name="ap_materno" value="<%= data.ap_materno%>" class="form-control"required></div></td>
+                                                  <td>CURP: <div class="form-group"><input type="text" name="curp"  value="<%= data.curp%>"class="form-control" required></div></td>
+                                                  
+        
+                                          </tr>
+                                          <tr>
+                                                <td>NSS: <div class="form-group"><input type="text" name="nss" value="<%= data.nss%>" class="form-control"required></div></td>
+                                                <td>SEXO: <div class="form-group"><input type="text" name="Sexo" value="<%= data.Sexo%>"class="form-control"required></div></td>
+
+                                          <td>FECHA DE NACIMIENTO: <div class="form-group"><input type="text" name="Fecha_nacimiento" value="<%= data.Fecha_nacimiento%>" class="form-control"required></div></td>
+                                          <td>TIPO DE SANGRE: <div class="form-group"><input type="text" name="T_sangre" value="<%= data.T_sangre%>"  class="form-control" required></div></td>
+
+                                          </tr>
+                                          <tr>
+
+                                          <td>NACIONALIDAD: <div class="form-group"><input type="text" name="Nacionalidad"  value="<%= data.Nacionalidad%>" class="form-control"required></div></td>
+                                          <td>DIRECCION: <div class="form-group"><input type="text" name="direcccion" value="<%= data.direcccion%>" class="form-control"required></div></td>
+                                          <td>CIUDAD: <div class="form-group"><input type="text" name="ciudad" value="<%= data.ciudad%>"class="form-control"required></div></td>
+                                          <td>MUNICIPIO: <div class="form-group"><input type="text" name="municipio"  value="<%= data.municipio%>"class="form-control" required></div></td>
+
+                                          </tr>
+                                          <tr>
+
+                                                <td>TELEFONO RESIDENCIAL:<div class="form-group"><input type="text" name="Tel_residencial"  value="<%= data.Tel_resindencial%>"class="form-control"required></div></td>
+                                                <td>TELEFONO CELULAR:<div class="form-group"><input type="text" name="celular" value="<%= data.celular%>" class="form-control"required></div></td>
+                                                <td>EMAIL: <div class="form-group"><input type="text" name="correo"  value="<%= data.correo%>" class="form-control" ></div></td>
+                                          </tr>
+                            
+                    
+                                        </tbody>
+                                        </table>
+            
+        </div>
+        </div>
+
+
+
+
+        <div class="container mt-7">
+                <div class="col-md-16">
+            
+                        <div class="row">
+                          
+                                <table class="table table-bordered table-hover">
+                                
+                                        <tbody>
+                              
+                                        <tr class="table-primary">
+                                            <th scope="col " >DATOS ESCOLARES</th>
+                                               
+                                         </tr>
+                                            
+                                                  <tr> 
+                                                        <td>CAMPUS: <div class="form-group"><input type="text" name="campus" value="<%= data.campus%>" class="form-control"required></div></td>
+                                                        <td>NO. CONTROL: <div class="form-group"><input type="text" name="no_control" value="<%= data.matricula%>"class="form-control"required></div></td>
+                                                        <td>CARRERA: <div class="form-group"><input type="text" name="carrera" value="<%= data.carrero%>" class="form-control"required></div></td>
+                                                          <td>SEMESTRE: <div class="form-group"><input type="text" name="semestre"  value="<%= data.semestre%>" class="form-control" required></div></td>
+                                                          
+                                                  </tr>
+                                                  <tr>
+                                                        <td>PLAN DE ESTUDIOS: <div class="form-group"><input type="text" name="plan_de_estudios" value="<%= data.plan_de_estudios%>" class="form-control"required></div></td>
+                                                        <td>MODALIDAD: <div class="form-group"><input type="text" name="modalidad" value="<%= data.modalidad%>" class="form-control"required></div></td>
+                                                        <td>INGRESO: <div class="form-group"><input type="text" name="ingreso" value="<%= data.ingreso%>" class="form-control"required></div></td>
+                                                        <td> SITUACIÓN ACADEMICA<div class="form-group"><input type="text" name="situcion_academica" value="<%= data.situcion_academica%>" class="form-control" required></div></td>
+        
+                                                  </tr> </div> 
+                                                  
+                                    
+                            
+                                                </tbody>
+                                                </table>
+                    
+                            
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="container mt-7">
+                        <div class="col-md-16">
+                    
+                                <div class="row">
+                                  
+                                        <table class="table table-bordered table-hover">
+                                        
+                                                <tbody>
+                                      
+                                                <tr class="table-primary">
+                                                    <th scope="col " >DATOS DE TUTOR</th>
+                                                    
+                                                 </tr>
+                                                    
+                                                          <tr> 
+                                                                <td>NOMBRE: <div class="form-group"><input type="text" name="nombreT" value="<%= data.nombreT%>" class="form-control"required></div></td>
+                                                                <td>AP. PATERNO: <div class="form-group"><input type="text" name="ap_paternoT"  value="<%= data.ap_paternoT%>" class="form-control"required></div></td>
+                                                                <td>AP. MATERNO: <div class="form-group"><input type="text" name="ap_maternoT" value="<%= data.ap_maternoT%>" class="form-control"required></div></td>
+                                                                <td>CURP: <div class="form-group"><input type="text" name="curpT" value="<%= data.curpT%>" class="form-control" required></div></td>
+                        
+                                                          </tr>
+                                                          <tr>
+                                                                <td>SEXO: <div class="form-group"><input type="text" name="sexoT" value="<%= data.sexoT%>" class="form-control" required></div></td>      
+                                                                <td>DIRECCION: <div class="form-group"><input type="text" name="direccionT" value="<%= data.direccionT%>" class="form-control"required></div></td>
+                                                                <td>CIUDAD: <div class="form-group"><input type="text" name="ciudadT" value="<%= data.ciudadT%>" class="form-control"required></div></td>
+                                                                <td>MUNICIPIO: <div class="form-group"><input type="text" name="municipioT" value="<%= data.municipioT%>" class="form-control" required></div></td>
+                
+                                                          </tr>
+                                                          <tr>
+                                                            <td>TELEFONO RESIDENCIAL: <div class="form-group"><input type="text" name="Telefono_residencialT" value="<%= data.Telefono_residencialT%>" class="form-control"required></div></td>
+                                                            <td>CELULAR: <div class="form-group"><input type="text" name="celularT" value="<%= data.celularT%>" class="form-control"required></div></td>
+                                                            <td>CORREO: <div class="form-group"><input type="text" name="correoT" value="<%= data.correoT%>" class="form-control"required></div></td>
+                                                            <td>MATRICULA HIJO: <div class="form-group"><input type="text" name="id_hijo_matricula" value="<%= data.no_control%>"  class="form-control" required></div></td>
+                
+                                                      </tr>
+                                                                  
+                                   </div> 
+                                                          
+                                            
+                                    
+                                                        </tbody>
+                                                        </table>
+                            
+                </div>
+                </div>
+
+
+
+
+                <div class="container mt-7">
+                        <div class="col-md-16">          
+                                <div class="row">
+                                  
+                                        <table class="table table-bordered table-hover">
+                                        
+                                                <tbody>
+                                      
+                                                <tr class="table-primary">
+                                                    <th scope="col " >DATOS ESCOLARES</th>
+                                                    
+                                                 </tr>
+                                                    
+                                                          
+                                                             
+                    <td>TIPO DE DISCAPACIDAD: <div class="form-group"><input type="text" name="tipo"value="<%= data.tipo%>" class="form-control"required></div></td>
+                    <td>TIPO DE DISCAPACIDAD OTRO: <div class="form-group"><input type="text" name="tipootro"value="<%= data.tipootro%>" class="form-control" ></div></td>
+                    <td>MATRICULA: <div class="form-group"><input type="text" name="id_matricula" value="<%= data.id_hijo_matricula%>" class="form-control"required></div></td>
+                    <td>OBSERVACIONES (DISCAPACIDAD): <div class="form-group"><input type="text" name="observaciones" value="<%= data.observaciones%>" class="form-control"required></div></td>
+                                                                
+                     </div> 
+                 </tbody>
+                </table>
+                
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">IMPRIMIR</button>
+                                        
+                    </form>
+
+<% include partials/_foterxico %>

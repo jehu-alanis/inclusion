@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ITSX INCLUSION</title>
+    <!-- NAVIGATION -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  <!-- helpers -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </head>
+  <body>
+       
+    <!-- navigation -->
+    
+    <div class="navbar navbar-fixed-top navbar-custom ">
+    
+        
+            <a href="#" class="navbar-brand"><img src="/images/itsx2.png" width="300" height="100"></a>
+    
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/pro">INICIO</a>
+            
+            <a class="navbar-brand" href="/busqueda" data-toggle="tooltip" data-placement="top" title="Consultar alumnos" >CONSULTAS</a>
+              <a class="navbar-brand" href="/formulario1" data-toggle="tooltip" data-placement="top" title="Registrar nuevo alumno">REGISTROS</a>
+              <a class="navbar-brand" href="/logout" data-toggle="tooltip" data-placement="top" title="Cerrar sesión">SALIR</a>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal">
+                
+                  <i class='fas fa-question-circle' style='font-size:14px'></i> </button>
+
+            
+          </nav>
+          
+          <a href="#" class="navbar-right"><img src="/images/Inclusion.jpg" width="350" height="120" ></a>
+       
+           
+        
+
+    </div>
+    
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">HOLA! <%= user.username %> Este es el menú de inicio<br></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+Al hacer click  <i class='far fa-hand-point-right'></i> "inicio" podrás ir a la página principal. <br><br>            
+Al hacer click   <i class='far fa-hand-point-right'></i> "consutas" podrás consultar a los alumnos que ya están dados de alta en la plataforma y algunas graficas. <br><br>
+
+Al hacer click  <i class='far fa-hand-point-right'></i> "registros" podrás registrar a un alumno nuevo en la plataforma. <br><br>
+
+Al hacer click  <i class='far fa-hand-point-right'></i> "salir" podrás cerrar tu sesión. <br><br>
+
+
+</div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+        </script>  
+  </div>
+
+
+  

@@ -1,0 +1,68 @@
+<% include partials/_headerxico %>
+
+
+<div class="container mt-7">
+        <div class="col-md-16">
+    
+                <form action="/addformulario33"  name=formulario method="POST">
+          <p style="text-align: center;"><h5>NUEVO ALUMNO</h5></p>
+                <div class="row">
+                  
+                        <table class="table table-bordered table-hover">
+                        
+                                <tbody>
+                      
+                                <tr class="table-primary">
+                                    <th scope="col " >DATOS DE TUTOR</th>
+                                    
+                                 </tr>
+                                    
+                                          <tr> 
+                                                <td>NOMBRE: <div class="form-group"><input type="text" name="nombreT" class="form-control"required></div></td>
+                                                <td>AP. PATERNO: <div class="form-group"><input type="text" name="ap_paternoT" class="form-control"required></div></td>
+                                                <td>AP. MATERNO: <div class="form-group"><input type="text" name="ap_maternoT" class="form-control"required></div></td>
+                                                <td>CURP: <div class="form-group"><input type="text" name="curpT"  class="form-control" required></div></td>
+        
+                                          </tr>
+                                          <tr><td>
+                                                      <fieldset class="form-group"  >
+                                                                  <legend>SEXO</legend>
+                                                                 <div class="form-check">
+                                                                 <label class="form-check-label">
+                                                                  <input type="radio" class="form-check-input" name="sexoT" id="optionsRadios1" value="MASCULINO" checked="">
+                                                                  MASCULINO
+                                                                   </label>
+                                                                  </div>
+                                                                  <div class="form-check">
+                                                                 <label class="form-check-label">
+                                                                   <input type="radio" class="form-check-input" name="sexoT" id="optionsRadios2" value="FEMENINO">
+                                                                   FEMENINO
+                                                                  </label>
+                                                                  </div> </fieldset></td>
+                                                <td>DIRECCION: <div class="form-group"><input type="text" name="direccionT" class="form-control"required></div></td>
+                                                <td>CIUDAD: <div class="form-group"><input type="text" name="ciudadT" class="form-control"required></div></td>
+                                                <td>MUNICIPIO: <div class="form-group"><input type="text" name="municipioT"  class="form-control" required></div></td>
+
+                                          </tr>
+                                          <tr>
+                                            <td>TELEFONO RESIDENCIAL: <div class="form-group"><input type="text" name="Telefono_residencialT" class="form-control"required></div></td>
+                                            <td>CELULAR: <div class="form-group"><input type="text" name="celularT" class="form-control"required></div></td>
+                                            <td>CORREO: <div class="form-group"><input type="text" name="correoT" class="form-control"required></div></td>
+                                            <td>MATRICULA HIJO: <div class="form-group"><input type="text" name="id_hijo_matricula" value="<%= data.no_control%>"  class="form-control" required></div></td>
+
+                                      </tr>
+                                                  
+                   </div> 
+                                          
+                            
+                    
+                                        </tbody>
+                                        </table>
+            
+                                        <button type="submit" class="btn btn-primary">GUARDAR</button>
+                                        
+</form>
+</div>
+</div>
+
+<% include partials/_foterxico %>

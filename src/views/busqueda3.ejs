@@ -1,0 +1,281 @@
+<% include partials/_headerinconada %>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/consultacampus3" data-toggle="tooltip" data-placement="top" title="Grafica por plantel ">ALUMNOS POR PLANTEL</a>
+    <a class="navbar-brand" href="/consultasexo3 " data-toggle="tooltip" data-placement="top" title="Grafica por sexo ">ALUMNOS POR SEXO</a>
+    <a class="navbar-brand" href="/consultacarrera3 " data-toggle="tooltip" data-placement="top" title="Grafica por carreras ">ALUMNOS POR CARRERA</a>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal2">
+                  
+        <i class='fas fa-question-circle' style='font-size:14px'></i> </button>
+      
+    </nav>
+   
+   
+    
+  <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-10">
+      
+          <table class="table table-bordered table-hover" id="ta">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal6"><i class='fas fa-question-circle' style='font-size:14px'></i> </button>
+            <thead>
+               
+  
+                <tr class="table-primary">
+                    
+                    <th scope="col ">Nombre</th>
+                    <th scope="col ">AP Paterno</th> 
+                    <th scope="col ">AP Materno</th>
+                    <th scope="col ">Matricula</th>
+                    <th scope="col ">Carrera</th>
+                    <th> <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal3"><i class='fas fa-question-circle' style='font-size:14px'></i> </button> </th> 
+                    <th><button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal4"><i class='fas fa-question-circle' style='font-size:14px'></i> </button>  </th> 
+                    <th> <button type="button" class="btn btn-primary" data-toggle="modal" data-placement="top" title="Ayuda" data-target="#myModal5"><i class='fas fa-question-circle' style='font-size:14px'></i> </button> </th> 
+                     
+                    
+                  </tr>
+              
+            </thead>
+            
+            <tbody>
+              <% if (data) { %>
+                <% for(var i = 0; i < data.length; i++) { %>
+                  <tr>
+                    <!--<td><%= (i + 1) %></td>--->
+                    <td><%= data[i].nombre %></td>
+                    <td><%= data[i].ap_paterno %></td>
+                    <td><%= data[i].ap_materno %></td>
+                    <td><%= data[i].matricula %></td>
+                    <td><%= data[i].carrera %></td>
+                    <td>
+                      <a href="/ver3/<%= data[i].matricula%>" class="btn btn-primary">Ver</a>
+                    
+                    
+                  </td>
+                <td><a href="/delete3/<%= data[i].matricula %>" class="btn btn-danger" onclick = "if (confirm('CONFIRMAR')) commentDelete(1); return false" >Eliminar</a> </td>
+                
+                <td> <a href="/editar3/<%= data[i].matricula %>" class="btn btn-info">Actualizar</a></td>  
+                </tr>
+  
+               
+                
+  
+                <% } %>
+              <% } %>
+            </tbody>
+          </table>
+   
+        </div>
+  
+  
+  
+  
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  
+  </script>
+  
+  
+  <script type="text/javascript">
+  $(document).ready( function () {
+      $('#ta').DataTable();
+      
+  } );
+  
+  </script>
+  
+  
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+  
+  
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  
+  
+  
+   <!-- The Modal -->
+   <div class="modal fade" id="myModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title"> Este es el menú de consutas de graficas<br></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+  Al hacer click  <i class='far fa-hand-point-right'></i> "alumnos por plantel" podrás observar una grafica de todos los alumnos por plantel inscritos en la plataforma. <br><br>            
+  Al hacer click   <i class='far fa-hand-point-right'></i> "alumnos por sexo" podrás observar una grafica clasificando a los alumnos por sexo inscritos en la plataforma. <br><br>
+  
+  Al hacer click  <i class='far fa-hand-point-right'></i> "alumnos por carrera" podrás observar una grafica clasificando a los alumnos por carrera inscritos en la plataforma. <br><br>
+  
+  </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  
+  
+  
+     <!-- The Modal -->
+     <div class="modal fade" id="myModal3">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">VER E IMPRIMIR<br></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+  Al hacer click  <i class='far fa-hand-point-right'></i> "ver" podrás ver la información completa del alumno y descargarlo en PDF. <br><br>            
+  
+  
+  
+  </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  
+  
+  
+       <!-- The Modal -->
+    <div class="modal fade" id="myModal4">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">ELIMINAR<br></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+  Al hacer click  <i class='far fa-hand-point-right'></i> "eliminar" podrás eliminar al alumno de la plataforma.<br><br>            
+  ¡CUIDADO!
+  
+  
+  </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  
+  
+  
+       <!-- The Modal -->
+    <div class="modal fade" id="myModal5">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">ACTUALIZAR<br></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+  Al hacer click  <i class='far fa-hand-point-right'></i> "Actualizar" podrás editar la información del alumno y subir el PDF. <br><br>            
+  
+  
+  </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
+  
+  
+   <!-- The Modal -->
+   <div class="modal fade" id="myModal6">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">VISTA Y BUSCADOR<br></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+  Al hacer click  <i class='far fa-hand-point-right'></i> "show entries" podrás establecer los maximos alumnos que deseas ver previamente, por defecto esta en 10. <br><br>            
+  
+  Para consultar datos del alumnado  <i class='fas fa-search'></i> "Search:" debes de escribir la información que desees en el campo de texto.<br><br>            
+  Puedes buscar por "nombre", "matricula" y "carrera".
+  </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Entendido</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+<% include partials/_foterrinconada %>

@@ -1,0 +1,162 @@
+<% include partials/_headeritsx %>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src= https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+      var datos = {
+          type: "pie",
+          data : {
+              datasets :[{
+                  data : [
+                      0,
+                      0,
+                      
+                  ],
+                  backgroundColor: [
+                      "#F7464A",
+                      "#46BFBD",
+                      
+                  ],
+              }],
+              labels : [
+                  "SISTEMAS",
+                  "G. EMPRESARIAL",
+                  "CIVIL",
+                  "BIOQUÍMICA",
+                  "ELECTROMECÁNICA",
+                  "MECATRÓNICA",
+                  "INDUSTRIAL",
+                  "ELETRÓNICA",
+                  "GASTRONOMIA",
+                  "I. ALIMENTARIAS",
+                  
+              ]
+          },
+          options : {
+              responsive : true,
+          }
+      };
+
+      var canvas = document.getElementById('chart').getContext('2d');
+      window.pie = new Chart(canvas, datos);
+
+      setInterval(function(){
+          datos.data.datasets.splice(0);
+          var newData = {
+              backgroundColor : [
+                  "#000000",
+                  "#FF0000",
+                  "#00FF00",
+                  "#0000FF",
+                  "#FFFF00",
+                  "#00FFFF",
+                  "#FF00FF",
+                  "#808080",
+                  "#808000",
+                  "#800080",
+                  
+              ],
+            
+              data : [ ISC(),  IGE(),IC(),IBQ(),  IELM(),IMCT(),IID(), IELE(),LG(),IEIA() ]
+          };
+
+          datos.data.datasets.push(newData);
+
+          window.pie.update();
+
+      }, 5000);
+
+
+
+      function ISC(){
+        return  a = parseFloat(document.formulario.XALAPA.value);
+
+      }
+      function IGE(){
+        return  B = parseFloat(document.formulario.XICO.value);
+
+      }
+
+      function IC(){
+        return  C = parseFloat(document.formulario.RINCONADA.value);
+
+      }
+      function IBQ(){
+        return  D = parseFloat(document.formulario.XALAPA2.value);
+
+      }
+      function IELM(){
+        return  F = parseFloat(document.formulario.XICO2.value);
+
+      }
+
+      function IMCT(){
+        return  H = parseFloat(document.formulario.RINCONADA2.value);
+
+      }
+      function IID(){
+        return  I = parseFloat(document.formulario.XALAPA3.value);
+
+      }
+      function IELE(){
+        return  J = parseFloat(document.formulario.XICO3.value);
+
+      }
+
+      function LG(){
+        return  K = parseFloat(document.formulario.RINCONADA3.value);
+
+      }
+      function IEIA(){
+        return  L = parseFloat(document.formulario.RINCONADA4.value);
+
+      }
+
+  });
+  </script>
+
+  <div id="canvas-container" style="width:50%;">
+      <canvas id="chart" width="500" height="350"></canvas>
+  </div>
+
+
+  <div class="container mt-7">
+    <div class="col-md-16">
+
+            <form action=""  name=formulario method="POST">
+      
+            <div class="row">
+              
+                    <table class="table table-bordered table-hover">
+                    
+                            <tbody>
+
+                                
+                                      
+   <tr>                                      
+<td>ING.SISTEMAS : <div class="form-group"><input type="text" name="XALAPA" value="<%= data.a1%>" class="form-control"required></div></td>
+<td>ING.GESTION EMPRESARIAL: <div class="form-group"><input type="text" name="XICO" value="<%= data.a2%>" class="form-control"required></div></td>
+<td>ING. CIVIL: <div class="form-group"><input type="text" name="RINCONADA" value="<%= data.a3%>" class="form-control"required></div></td>
+<td>ING. BIOQUÍMICA: <div class="form-group"><input type="text" name="XALAPA2" value="<%= data.a4%>" class="form-control"required></div></td>
+<td>ING. ELECTROMECÁNICA: <div class="form-group"><input type="text" name="XICO2" value="<%= data.a5%>" class="form-control"required></div></td>
+</rt> <tr>
+<td>ING. MECATRÓNICA: <div class="form-group"><input type="text" name="RINCONADA2" value="<%= data.a6%>" class="form-control"required></div></td>
+<td>ING. INDUSTRIAL: <div class="form-group"><input type="text" name="XALAPA3" value="<%= data.a7%>" class="form-control"required></div></td>
+<td>ING. ELECTRÓNICA: <div class="form-group"><input type="text" name="XICO3" value="<%= data.a8%>" class="form-control"required></div></td>
+<td>LIC. GASTRONOMIA: <div class="form-group"><input type="text" name="RINCONADA3" value="<%= data.a9%>" class="form-control"required></div></td>
+<td>ING. EN INDUSTRIAS ALIMENTARIAS: <div class="form-group"><input type="text" name="RINCONADA4" value="<%= data.a10%>" class="form-control"required></div></td>
+</tr>
+ </div> 
+</tbody>
+</table>                                    
+    </form>
+        </div>
+    </div>
+
+
+
+
+  <% include partials/_foteritsx %>

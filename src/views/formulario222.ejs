@@ -1,0 +1,76 @@
+<% include partials/_headerinconada %>
+
+
+<div class="container mt-7">
+        <div class="col-md-16">
+    
+                <form action="/addformulario222"  name=formulario method="POST">
+          <p style="text-align: center;"><h5>NUEVO ALUMNO</h5></p>
+                <div class="row">
+                  
+                        <table class="table table-bordered table-hover">
+                        
+                                <tbody>
+                      
+                                <tr class="table-primary">
+                                    <th scope="col " >DATOS ESCOLARES</th>
+                                       
+                                 </tr>
+                                    
+                                          <tr> 
+                                                <td>CAMPUS:  <div class="form-group">
+                                                        <select class="custom-select"name="campus">
+                                                        <option value="rinconada">RINCONADA</option>
+                                                                
+                                                        </select>
+                                                      </div> </td>
+                                              
+                                                <td>NO. CONTROL: <div class="form-group"><input type="text" name="no_control" value="<%= data.matricula%>"class="form-control"required></div></td>
+                                                <td>CARRERA:  <div class="form-group">
+                                                        <select class="custom-select"name="carrera">
+                                                                <option value="ING. SISTEMAS COMPUTACIONALES">ING. SISTEMAS COMPUTACIONALES</option>
+                                                                <option value="ING. GESTION EMPRESARIAL">ING. GESTION EMPRESARIAL</option>
+                                                                <option value="ING. CIVIL">ING. CIVIL</option>
+                                                                <option value="ING. BIOQUÍMICA">ING. BIOQUÍMICA</option>
+                                                                <option value="ING. ELECTROMECÁNICA">ING. ELECTROMECÁNICA</option>
+                                                                <option value="ING. MECATRÓNICA">ING. MECATRÓNICA</option>
+                                                                <option value="ING. INDUSTRIAL">ING. INDUSTRIAL</option>
+                                                                <option value="ING. ELECTRÓNICA">ING. ELECTRÓNICA</option>
+                                                                <option value="LIC. GASTRONOMIA">LIC. GASTRONOMIA</option>
+                                                                <option value="ING. EN INDUSTRIAS ALIMENTARIAS">ING. EN INDUSTRIAS ALIMENTARIAS</option>       
+                                                        </select>
+                                                      </div> </td> 
+                                                  <td>SEMESTRE: <div class="form-group"><input type="text" name="semestre"  class="form-control" required></div></td>
+                                                  
+                                          </tr>
+                                          <tr>
+                                                <td>PLAN DE ESTUDIOS: <div class="form-group"><input type="text" name="plan_de_estudios" class="form-control"required></div></td>
+                                                <td>MODALIDAD: <div class="form-group"><input type="text" name="modalidad" class="form-control"required></div></td>
+                                                <td>INGRESO: <div class="form-group"><input type="text" name="ingreso" class="form-control"required></div></td>
+                                                  
+                                                <td>SITUACIÓN ACADEMICA:  <div class="form-group">
+                                                                <select class="custom-select"name="situcion_academica">
+                                                                        <option value="ALTA">ALTA</option>
+                                                                        <option value="BAJA_TEMPORAL">BAJA TEMPORAL</option>
+                                                                        <option value="BAJA_DEFINITIVA">BAJA DEFINITIVA</option>
+                                                                </select>
+                                                              </div> </td> 
+                                                
+                                                
+
+                                          </tr>
+                                          
+                                                      </div> 
+                                          
+                            
+                    
+                                        </tbody>
+                                        </table>
+            
+                                        <button type="submit" class="btn btn-primary">GUARDAR</button>
+                                        
+        </form>
+            </div>
+        </div>
+
+<% include partials/_foterrinconada %>
